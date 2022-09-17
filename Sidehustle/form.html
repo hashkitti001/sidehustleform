@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.statically.io/gh/TheOdinProject/theodinproject/efdc2888072f409e687d31dc580595dbe4fe0ff4/app/assets/fonts/Norse-Bold.otf">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="img">
+            <div class="logo">
+               <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png">
+            </div>
+        </div>
+        <div class="sec2">
+            <p id="blurb">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started. 
+                You know you want to.
+            </p>
+            <div class="formi">
+                <p>Let's do this!</p>
+                <form>
+                    <div class="field">
+                    <label for="fname" value="First Name">First Name
+                    <input type="text" id="">
+                    </label>
+                    <label for="fname" value="First Name">Last Name
+                        <input type="text" id="">
+                        </label>
+                    </div>
+                    <div  class="field">
+                        <label for="fname" value="First Name">Email
+                            <input type="email" id="">
+                            </label>
+                            <label for="fname" value="First Name">Phone Number
+                                <input type="tel" id="">
+                                </label>
+                            </div>
+                            <div class="field">
+                                <label for="fname" value="First Name">Password
+                                    <input type="text" id="pword1" required>
+                                    <i>Passwords don't match</i>
+                                    </label>
+                                    <label for="fname" value="First Name">Confirm Password
+                                        <input type="text" id="pword2">
+                                        </label>
+                                    </div>
+                                    <input type="submit" value="Create Account" onclick="validate();" required>
+                </form>
+            </div>
+          
+            <h4>Already have an account? <a href="">Log in</a></h4>
+        </div>
+    </div>
+    <style>
+       *{
+        font-family: Norse Bold;
+       }
+       .container{
+          display: flex;
+        }
+       .logo{
+        margin-top: 40%;
+        height:110px;
+        text-align: center;
+        font-size: 30px;
+        color:white;
+        background: rgba(0, 0, 0, .4);
+       }
+       .logo img {
+        width:100px;
+        height:80px;
+       }
+       a{
+        text-decoration: none;
+       }
+        .img{
+            height:100vh;
+            width:40vw;
+            background-image: url("https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+            background-size:cover;
+        }
+        input[type="submit"]{
+            outline:none;
+            margin:10px;
+            width:210px;
+            height:45px;
+            border-radius: 10px;
+            outline:none;
+            border: none;
+            background-color:#596D48;
+            color:white;
+            margin-left:30px;
+            margin-top:20px;
+        }
+       h4 {
+        margin-left:70px;
+        margin-top:10px;
+       }
+       p {
+        font-size:22px;
+        font-weight:600;
+       }
+       #blurb{
+        margin-left:5%;
+        margin-top: 15%;
+        width:100vh;
+       }
+       .sec2{
+        background-color:#E5E7EB;
+       }
+      .formi {
+        padding-left:60px;
+        background-color:white;
+      }
+       label{
+        text-transform: uppercase;
+         font-size: 12px;
+         font-weight:800;
+       }
+        input[type="text"], input[type="email"],input[type="tel"],input[type="password"]{
+            display:block;
+            margin-right: 55vh;
+            width:200px;
+            height:25px;
+            border-radius: 5px;
+            outline: none;
+        }
+        input:focus{
+            border: 3px solid lightblue;
+        }
+        i{
+            text-transform: capitalize;
+            font-weight: 500;
+            color:red;
+            display: none;
+        }
+        
+        .field{
+            width:150vh;
+            display:flex;
+            flex-direction: row;
+            
+        }
+       
+        
+    </style>
+    <script>
+        function validate(){
+        var firstPassword = document.querySelector("#pword1");
+        var secondPassword = document.querySelector("#pword2");
+        var error = document.querySelector("i");
+        if(firstPassword.value !== secondPassword.value) {
+              error.style.display = "block";
+              firstPassword.style.border = "2px solid red";
+              secondPassword.style.border = "2px solid red";
+        }
+    }
+    </script>
+</body>
+</html>
